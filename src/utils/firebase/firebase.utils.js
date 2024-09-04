@@ -1,3 +1,4 @@
+import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 
 import {
@@ -22,19 +23,18 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCg1HnS9qWX7U7RJYonjMq8bG5EneHZw3Y",
-  authDomain: "crown-clothing-8fc35.firebaseapp.com",
-  projectId: "crown-clothing-8fc35",
-  storageBucket: "crown-clothing-8fc35.appspot.com",
-  messagingSenderId: "271639720410",
-  appId: "1:271639720410:web:deea0a59ffbfbda4b4d0e3",
-  measurementId: "G-2YE6KNC98B",
+  apiKey: "AIzaSyDFoT160xGD_3SqJycWRjr7WC-eVIkku20",
+  authDomain: "crown-clothing-c39b5.firebaseapp.com",
+  projectId: "crown-clothing-c39b5",
+  storageBucket: "crown-clothing-c39b5.appspot.com",
+  messagingSenderId: "481420928275",
+  appId: "1:481420928275:web:f0b77c4400ca08e2d566e6",
+  measurementId: "G-SL61HY7CGW",
 };
 
-/** 
-Initialize Firebase app
-*/
-const firebaseApp = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const provider = new GoogleAuthProvider();
 

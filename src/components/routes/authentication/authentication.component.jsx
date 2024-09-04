@@ -1,16 +1,15 @@
-import React from 'react'
-import SignUpForm from "../../sign-up/signup.component"
-import SignInForm from "../../sign-in/sign-in.component"
-
-import './authentication.style.scss'
+import React from "react";
+import SignUpForm from "../../sign-up/signup.component";
+import SignInForm from "../../sign-in/sign-in.component";
+import "./authentication.style.scss";
 
 const Authentication = () => {
-    return (
-        <div className="authentication-container">
-            <SignInForm />
-            <SignUpForm />
-        </div>
-    )
-}
+  return (
+    <div className="authentication-container">
+      <SignInForm />
+      <SignUpForm />
+    </div>
+  );
+};
 
-export default Authentication
+export default Authentication;

@@ -11,7 +11,7 @@ const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
   const navigates = useNavigate();
 
-  const goToCheckoutHendler = () => {
+  const goToCheckoutHandler = () => {
     navigates("/Checkout");
   };
   return (
@@ -25,7 +25,7 @@ const CartDropdown = () => {
           <span className="empty-message"> Your cart empty</span>
         )}
       </div>
-      <Button onClick={goToCheckoutHendler}>GO TO CHECKOUT</Button>
+      <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </div>
   );
 };

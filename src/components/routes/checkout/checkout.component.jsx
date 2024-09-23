@@ -7,25 +7,6 @@ import "./checkout.style.scss";
 
 const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
-
-  //   const handleClickOutside = (event) => {
-  //     if (
-  //       paymentContainerRef.current &&
-  //       paymentContainerRef.current.contains(event.target)
-  //     ) {
-  //       closePaymentForm();
-  //     }
-  //   };
-
-  //   if (isPaymentFormVisible) {
-  //     document.addEventListener("mousedown", handleClickOutside);
-  //   }
-
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [isPaymentFormVisible]);
-
   return (
     <div className="checkout-container">
       <div className="checkout-header">

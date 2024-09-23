@@ -1,6 +1,0 @@
-/node_modules
-.gitignore
-
-.env
-# Local Netlify folder
-.netlify

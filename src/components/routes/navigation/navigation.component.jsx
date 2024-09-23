@@ -1,12 +1,11 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useRef, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import { UserContext } from "../../../context/user.context";
+import { CartContext } from "../../../context/cart.context";
 
 import { signOutUser } from "../../../utils/firebase/firebase.utils";
 import { ReactComponent as CrownLogo } from "../../../assets/crown.svg";
-
-import { CartContext } from "../../../context/cart.context";
 
 import CartIcon from "../../cart-icon/cart-icon.component";
 import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
@@ -15,7 +14,26 @@ import "./navigation.style.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContext);
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const cartDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isCartOpen &&
+        cartDropdownRef.current &&
+        !cartDropdownRef.current.contains(event.target)
+      ) {
+        setIsCartOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isCartOpen, setIsCartOpen]);
 
   return (
     <Fragment>
@@ -28,9 +46,10 @@ const Navigation = () => {
             SHOP
           </Link>
           {currentUser ? (
-            <Link className="nav-link" onClick={signOutUser}>
+            <span className="nav-link" onClick={signOutUser}>
+              {" "}
               SIGN-OUT
-            </Link>
+            </span>
           ) : (
             <Link className="nav-link" to="/auth">
               SIGN-IN
@@ -38,7 +57,11 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
-        {isCartOpen && <CartDropdown />}
+        {isCartOpen && (
+          <div ref={cartDropdownRef}>
+            <CartDropdown />
+          </div>
+        )}
       </div>
       <Outlet />
     </Fragment>

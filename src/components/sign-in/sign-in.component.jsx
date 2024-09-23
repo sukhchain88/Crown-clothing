@@ -9,6 +9,7 @@ import {
   signInUserAuthWithEmailAndPassword,
   signInWithGooglePopup,
 } from "../../utils/firebase/firebase.utils";
+import "./sign-in.style.scss";
 
 const defaultFormField = {
   email: "",
@@ -87,7 +88,7 @@ const SignInForm = () => {
         />
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
-          <Button buttonType="google" onClick={signInWithGoogle}>
+          <Button type='button' buttonType="google" onClick={signInWithGoogle}>
             Sign In With Google
           </Button>
         </div>

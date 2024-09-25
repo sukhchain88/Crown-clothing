@@ -1,20 +1,20 @@
 {
 	"geolocation": {
 		"data": {
-			"city": "Mohali",
+			"city": "Patiāla",
 			"country": {
 				"code": "IN",
 				"name": "India"
 			},
-			"postal_code": "160059",
+			"postal_code": "147005",
 			"subdivision": {
 				"code": "PB",
 				"name": "Punjab"
 			},
 			"timezone": "Asia/Kolkata",
-			"latitude": 30.674,
-			"longitude": 76.7249
+			"latitude": 30.3388,
+			"longitude": 76.3906
 		},
-		"timestamp": 1726979896965
+		"timestamp": 1727244162234
 	}
 }

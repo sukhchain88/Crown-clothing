@@ -3,36 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@stripe/react-stripe-js": "^2.8.0",
     "@stripe/stripe-js": "^4.4.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
+    "babel-loader": "^9.2.1",
     "dotenv": "^16.4.5",
-=======
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
->>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
     "firebase": "^10.6.0",
     "get": "^1.4.0",
+    "html-webpack-plugin": "^5.6.0",
     "node": "v20.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
     "sass": "^1.74.1",
-<<<<<<< HEAD
     "stripe": "^16.10.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-=======
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
     "start": "react-scripts  start",
->>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -57,10 +47,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-<<<<<<< HEAD
   },
   "proxy": "http://localhost:8888"
-=======
-  }
->>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
 }

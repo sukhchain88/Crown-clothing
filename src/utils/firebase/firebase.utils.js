@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { getAnalytics } from "firebase/analytics";
+>>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
 import { initializeApp } from "firebase/app";
 
 import {
@@ -33,6 +37,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+<<<<<<< HEAD
+=======
+const analytics = getAnalytics(app);
+>>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
 
 const provider = new GoogleAuthProvider();
 

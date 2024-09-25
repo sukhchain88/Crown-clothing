@@ -49,12 +49,16 @@ export const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+<<<<<<< HEAD
 
   const [cartItems, setCartItems] = useState(() => {
     const storedItems = localStorage.getItem("cartItems");
     return storedItems ? JSON.parse(storedItems) : [];
   });
 
+=======
+  const [cartItems, setCartItems] = useState([]);
+>>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
   const [cartItemCount, setCartItemCount] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
 
@@ -74,10 +78,13 @@ export const CartProvider = ({ children }) => {
     setCartTotal(newCartTotal);
   }, [cartItems]);
 
+<<<<<<< HEAD
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
+=======
+>>>>>>> 96cc9a6d24c1dca6338699b3e08a658d37aa7a2d
   const addItemToCart = (productToAdd) => {
     setCartItems(addCartItem(cartItems, productToAdd));
   };

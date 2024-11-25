@@ -47,7 +47,6 @@ const Navigation = () => {
           </Link>
           {currentUser ? (
             <span className="nav-link" onClick={signOutUser}>
-              {" "}
               SIGN-OUT
             </span>
           ) : (
@@ -56,14 +55,12 @@ const Navigation = () => {
             </Link>
           )}
           <CartIcon />
+          {isCartOpen && (
+            <div className="nav-link" ref={cartDropdownRef}>
+              <CartDropdown />
+            </div>
+          )}
         </div>
-
-        {isCartOpen && (
-          <div ref={cartDropdownRef}>
-            <CartDropdown />
-          </div>
-        )}
-        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </Fragment>

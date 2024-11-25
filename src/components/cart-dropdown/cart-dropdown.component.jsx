@@ -9,10 +9,11 @@ import "./cart-dropdown.style.scss";
 
 const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
-  const navigates = useNavigate();
+  const navigate = useNavigate();
 
   const goToCheckoutHandler = () => {
-    navigates("/Checkout");
+    console.log("1");
+    navigate("/Checkout");
   };
   return (
     <div className="cart-dropdown-container">

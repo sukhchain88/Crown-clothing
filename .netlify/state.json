@@ -1,20 +1,20 @@
 {
 	"geolocation": {
 		"data": {
-			"city": "Chandigarh",
+			"city": "Mohali",
 			"country": {
 				"code": "IN",
 				"name": "India"
 			},
 			"subdivision": {
-				"code": "CH",
-				"name": "Chandigarh"
+				"code": "PB",
+				"name": "Punjab"
 			},
 			"timezone": "Asia/Kolkata",
-			"latitude": 30.7339,
-			"longitude": 76.7889,
-			"postalCode": "160019"
+			"latitude": 30.674,
+			"longitude": 76.7249,
+			"postalCode": "160055"
 		},
-		"timestamp": 1732510147518
+		"timestamp": 1732868569311
 	}
 }

@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import {
+  CardElement,
+  AddressElement,
+  useStripe,
+  useElements,
+} from "@stripe/react-stripe-js";
 import { useContext } from "react";
 import { CartContext } from "../../context/cart.context";
 import { UserContext } from "../../context/user.context";
@@ -66,6 +71,7 @@ const PaymentFormItem = ({ closePaymentForm }) => {
     <form onSubmit={paymentHandler}>
       <h4>Credit Card Payment:</h4>
       <CardElement />
+      <AddressElement options={{ mode: "billing" }} />
       <PaymentActionButton
         isProcessingPayment={isProcessingPayment}
         closePaymentForm={closePaymentForm}
